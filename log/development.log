@@ -112,3 +112,96 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 4867)
 
 
+Started GET "/posts" for ::1 at 2020-12-20 11:12:38 +0900
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 3864)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 32.7ms | Allocations: 13266)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/masato/Desktop/rails/post_bootstrap_app/app/views"
+  * "/Users/masato/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/masato/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.4/app/views"
+):
+     8:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10:   <body>
+    11:     <%= render "layouts/header" %>
+    12:     <%= yield %>
+    13:   </body>
+    14: </html>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/posts" for ::1 at 2020-12-20 11:15:34 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 158)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 6562)
+
+
+Started GET "/posts/2/edit" for ::1 at 2020-12-20 11:15:38 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (8.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1012)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 9.1ms | Allocations: 3011)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>編集</h1>
+<%= render "form" button_value: "更新"%>
+
+):
+1:    <h1>編集</h1>
+2:    <%= render "form" button_value: "更新"%>
+  
+app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
+app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
+app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
+app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
+app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
+app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/posts/2/edit" for ::1 at 2020-12-20 11:16:43 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 10.1ms | Allocations: 2737)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3033)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms | Allocations: 8956)
+
+
+Started PATCH "/posts/2" for ::1 at 2020-12-20 11:16:48 +0900
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"J3fyh82gINkP7pnjQQEvJKvcAjGP9C4TeR5S24SKI65pNhw+qaPAmlIqrX36kMVayOmbDvymhU1gDh1JMKLSeg==", "post"=>{"title"=>"tests", "content"=>"test"}, "commit"=>"更新", "id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:24:in `update'
+  [1m[36mPost Update (2.4ms)[0m  [1m[33mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["content", "test"], ["updated_at", "2020-12-20 02:16:48.946644"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:24:in `update'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:24:in `update'
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 3.9ms | Allocations: 86733)
+
+
+  
+NameError (undefined local variable or method `post' for #<PostsController:0x00007f7fe9267af8>
+Did you mean?  @post):
+  
+app/controllers/posts_controller.rb:25:in `update'
