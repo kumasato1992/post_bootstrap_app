@@ -286,3 +286,122 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 5175)
 
 
+Started GET "/" for ::1 at 2020-12-20 20:42:47 +0900
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 4240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 15.3ms | Allocations: 158)
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 157)
+Completed 200 OK in 68ms (Views: 53.2ms | ActiveRecord: 4.5ms | Allocations: 13220)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-20 20:42:51 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.0ms | Allocations: 842)
+  Rendered posts/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 5658)
+
+
+Started POST "/posts" for ::1 at 2020-12-20 20:42:59 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"NCNKqusIn17Dji3iyfwIS1fLWmCRfXxBhfHjm4nvzNgZg4UJpvdAYSTB/lGCoSBCYmDb5QcRc4t0hqWT9FJClQ==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.0ms | Allocations: 3491)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Title can't be blank, Content can't be blank):
+  
+app/controllers/posts_controller.rb:16:in `create'
+Started POST "/posts" for ::1 at 2020-12-20 20:43:37 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"lPdipJKsrOSJ78vTh4rR+OT34c7LXO6Cp99M/cu0qbjatowd9q9Mp9Qr/008GzuGh8J48bgORdy+zwNvf5xYbA==", "post"=>{"title"=>"a", "content"=>""}, "commit"=>"投稿"}
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms | Allocations: 1777)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Content can't be blank):
+  
+app/controllers/posts_controller.rb:16:in `create'
+Started POST "/posts" for ::1 at 2020-12-20 20:43:45 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"lPdipJKsrOSJ78vTh4rR+OT34c7LXO6Cp99M/cu0qbjatowd9q9Mp9Qr/008GzuGh8J48bgORdy+zwNvf5xYbA==", "post"=>{"title"=>"", "content"=>"a"}, "commit"=>"投稿"}
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 1729)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Title can't be blank):
+  
+app/controllers/posts_controller.rb:16:in `create'
+Started POST "/posts" for ::1 at 2020-12-20 20:43:56 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"lPdipJKsrOSJ78vTh4rR+OT34c7LXO6Cp99M/cu0qbjatowd9q9Mp9Qr/008GzuGh8J48bgORdy+zwNvf5xYbA==", "post"=>{"title"=>"a", "content"=>"a"}, "commit"=>"投稿"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "a"], ["content", "a"], ["created_at", "2020-12-20 11:43:56.161755"], ["updated_at", "2020-12-20 11:43:56.161755"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms | Allocations: 3312)
+
+
+Started GET "/posts/6" for ::1 at 2020-12-20 20:43:56 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 63)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 16ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 7150)
+
+
+Started GET "/posts" for ::1 at 2020-12-20 20:43:58 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 5679)
+
+
+Started DELETE "/posts/6" for ::1 at 2020-12-20 20:44:02 +0900
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kxvNxRWvCCBuyO1sGqDv9tAQZI0YakBb5imlBIvQd4vdWiN8cazoYzMM2fKhMQWIsyX9sms46wX/OeqWP/iGXw==", "id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+  [1m[36mPost Destroy (0.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms | Allocations: 3231)
+
+
+Started GET "/" for ::1 at 2020-12-20 20:44:02 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 5548)
+
+
