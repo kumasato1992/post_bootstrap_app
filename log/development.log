@@ -30,7 +30,7 @@ Built at: 2020/12/19 21:11:57
                                      Asset       Size       Chunks                         Chunk Names
     js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
 js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
-                             manifest.json  364 bytes               [emitted]              
+                             manifest.json  364 bytes               [emitted]
 Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
 [./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
 [./app/javascript/channels/index.js] 211 bytes {application} [built]
@@ -123,7 +123,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 78ms (ActiveRecord: 32.7ms | Allocations: 13266)
 
 
-  
+
 ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
   * "/Users/masato/Desktop/rails/post_bootstrap_app/app/views"
   * "/Users/masato/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.4/app/views"
@@ -136,7 +136,7 @@ ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en
     12:     <%= yield %>
     13:   </body>
     14: </html>
-  
+
 app/views/layouts/application.html.erb:11
 Started GET "/posts" for ::1 at 2020-12-20 11:15:34 +0900
 Processing by PostsController#index as HTML
@@ -159,14 +159,14 @@ Processing by PostsController#edit as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 9.1ms | Allocations: 3011)
 
 
-  
+
 ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>編集</h1>
 <%= render "form" button_value: "更新"%>
 
 ):
 1:    <h1>編集</h1>
 2:    <%= render "form" button_value: "更新"%>
-  
+
 app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
 app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
 app/views/posts/edit.html.erb:2: syntax error, unexpected local variable or method, expecting ')'
@@ -200,10 +200,10 @@ Processing by PostsController#update as HTML
 Completed 500 Internal Server Error in 155ms (ActiveRecord: 3.9ms | Allocations: 86733)
 
 
-  
+
 NameError (undefined local variable or method `post' for #<PostsController:0x00007f7fe9267af8>
 Did you mean?  @post):
-  
+
 app/controllers/posts_controller.rb:25:in `update'
 Started GET "/" for ::1 at 2020-12-20 19:51:15 +0900
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -316,9 +316,9 @@ Processing by PostsController#create as HTML
 Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.0ms | Allocations: 3491)
 
 
-  
+
 ActiveRecord::RecordInvalid (Validation failed: Title can't be blank, Content can't be blank):
-  
+
 app/controllers/posts_controller.rb:16:in `create'
 Started POST "/posts" for ::1 at 2020-12-20 20:43:37 +0900
 Processing by PostsController#create as HTML
@@ -326,9 +326,9 @@ Processing by PostsController#create as HTML
 Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms | Allocations: 1777)
 
 
-  
+
 ActiveRecord::RecordInvalid (Validation failed: Content can't be blank):
-  
+
 app/controllers/posts_controller.rb:16:in `create'
 Started POST "/posts" for ::1 at 2020-12-20 20:43:45 +0900
 Processing by PostsController#create as HTML
@@ -336,9 +336,9 @@ Processing by PostsController#create as HTML
 Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 1729)
 
 
-  
+
 ActiveRecord::RecordInvalid (Validation failed: Title can't be blank):
-  
+
 app/controllers/posts_controller.rb:16:in `create'
 Started POST "/posts" for ::1 at 2020-12-20 20:43:56 +0900
 Processing by PostsController#create as HTML
@@ -405,140 +405,208 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 5548)
 
 
-Started GET "/" for ::1 at 2020-12-24 21:30:28 +0900
-  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+Started GET "/" for ::1 at 2020-12-21 22:03:29 +0900
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PostsController#index as HTML
   Rendering posts/index.html.erb within layouts/application
-  [1m[36mPost Load (3.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
-  ↳ app/views/posts/index.html.erb:26
-  Rendered posts/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 4969)
-[Webpacker] Compiling...
-[Webpacker] Compilation failed:
-Hash: 3ed5f75dd8d560fb9a1d
-Version: webpack 4.44.2
-Time: 1122ms
-Built at: 2020/12/24 21:30:32
-                                     Asset       Size       Chunks                         Chunk Names
-    js/application-fb98732bd017b168710c.js    124 KiB  application  [emitted] [immutable]  application
-js/application-fb98732bd017b168710c.js.map    138 KiB  application  [emitted] [dev]        application
-                             manifest.json  364 bytes               [emitted]              
-Entrypoint application = js/application-fb98732bd017b168710c.js js/application-fb98732bd017b168710c.js.map
-[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
-[./app/javascript/channels/index.js] 211 bytes {application} [built]
-[./app/javascript/packs/application.js] 217 bytes {application} [built]
-[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
-    + 3 hidden modules
-
-ERROR in ./app/javascript/packs/application.js
-Module not found: Error: Can't resolve '@fortawesome/fontawesome-free/js/all' in '/Users/masato/Desktop/rails/post_bootstrap_app/app/javascript/packs'
- @ ./app/javascript/packs/application.js 11:0-47
-
-ERROR in ./app/javascript/packs/application.js
-Module not found: Error: Can't resolve 'bootstrap/dist/js/bootstrap' in '/Users/masato/Desktop/rails/post_bootstrap_app/app/javascript/packs'
- @ ./app/javascript/packs/application.js 9:0-38
-
-  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 163)
-  Rendered layouts/_flash.html.erb (Duration: 0.7ms | Allocations: 154)
-Completed 200 OK in 3315ms (Views: 3283.9ms | ActiveRecord: 18.6ms | Allocations: 20055)
+  [1m[36mPost Load (4.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 4256)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 158)
+  Rendered layouts/_flash.html.erb (Duration: 0.8ms | Allocations: 154)
+Completed 200 OK in 76ms (Views: 41.9ms | ActiveRecord: 8.0ms | Allocations: 13218)
 
 
-  
-ActionController::RoutingError (No route matches [GET] "/assets/bootstrap/scss/bootstrap"):
-  
-actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.2.3) lib/rack/method_override.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
-webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
-puma (4.3.7) lib/puma/configuration.rb:228:in `call'
-puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
-puma (4.3.7) lib/puma/server.rb:472:in `process_client'
-puma (4.3.7) lib/puma/server.rb:328:in `block in run'
-puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/" for ::1 at 2020-12-24 21:39:58 +0900
-  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb within layouts/application
-  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
-  ↳ app/views/posts/index.html.erb:26
-  Rendered posts/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4969)
-Completed 500 Internal Server Error in 201ms (ActiveRecord: 3.9ms | Allocations: 22325)
-
-
-  
-ActionView::Template::Error (Error: File to import not found or unreadable: @fontawesome/fontawesome-free/scss/regular.
-        on line 21:2 of app/assets/stylesheets/application.scss
->>  @import "@fontawesome/fontawesome-free/scss/regular";
-
-   -^
-):
-    4:     <title>PostBootstrapApp</title>
-    5:     <%= csrf_meta_tags %>
-    6:     <%= csp_meta_tag %>
-    7:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    8:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    9:   </head>
-   10:   <body>
-  
-app/assets/stylesheets/application.scss:21
-app/views/layouts/application.html.erb:7
-Started GET "/" for ::1 at 2020-12-24 21:40:52 +0900
+Started GET "/posts" for ::1 at 2020-12-21 22:03:34 +0900
 Processing by PostsController#index as HTML
   Rendering posts/index.html.erb within layouts/application
   [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
-  ↳ app/views/posts/index.html.erb:26
-  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1762)
-[Webpacker] Compiling...
-[Webpacker] Compiled all packs in /Users/masato/Desktop/rails/post_bootstrap_app/public/packs
-[Webpacker] Hash: 1dcd51f99355cc37cbdf
-Version: webpack 4.44.2
-Time: 3683ms
-Built at: 2020/12/24 21:40:59
-                                     Asset       Size       Chunks                         Chunk Names
-    js/application-596709cb2d1deff4fce4.js   1.87 MiB  application  [emitted] [immutable]  application
-js/application-596709cb2d1deff4fce4.js.map   2.01 MiB  application  [emitted] [dev]        application
-                             manifest.json  364 bytes               [emitted]              
-Entrypoint application = js/application-596709cb2d1deff4fce4.js js/application-596709cb2d1deff4fce4.js.map
-[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
-[./app/javascript/channels/index.js] 211 bytes {application} [built]
-[./app/javascript/packs/application.js] 217 bytes {application} [built]
-[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
-[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
-    + 10 hidden modules
-
-  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 163)
-  Rendered layouts/_flash.html.erb (Duration: 0.9ms | Allocations: 153)
-Completed 200 OK in 7407ms (Views: 7405.3ms | ActiveRecord: 0.4ms | Allocations: 100082)
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 5537)
 
 
-  
-ActionController::RoutingError (No route matches [GET] "/assets/@fortawesome/fontawesome-free/wenfonts/fa-regular-400.woff2"):
-  
+Started GET "/posts" for ::1 at 2020-12-21 22:03:36 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 5533)
+
+
+Started GET "/posts" for ::1 at 2020-12-21 22:03:39 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.9ms | Allocations: 5532)
+
+
+Started GET "/posts" for ::1 at 2020-12-21 22:03:48 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 5510)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-21 22:03:50 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 75.5ms | Allocations: 89208)
+  Rendered posts/new.html.erb within layouts/application (Duration: 77.0ms | Allocations: 89505)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.0ms | Allocations: 94028)
+
+
+Started POST "/posts" for ::1 at 2020-12-21 22:04:03 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"WwsnXrP4dDSugTYYMlfqedmgGVDY02qVbk4UMGSGYe52q+j9/gerC0nO5at5CsJw7AuY1U6/ZV+fOVI4GTvvow==", "post"=>{"title"=>"masamasa", "content"=>"samui"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "masamasa"], ["content", "samui"], ["created_at", "2020-12-21 13:04:03.720138"], ["updated_at", "2020-12-21 13:04:03.720138"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms | Allocations: 3480)
+
+
+Started GET "/posts/7" for ::1 at 2020-12-21 22:04:03 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 5617)
+
+
+Started GET "/posts" for ::1 at 2020-12-21 22:04:06 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 5642)
+
+
+Started GET "/posts/7" for ::1 at 2020-12-21 22:04:09 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 0.8ms | Allocations: 4933)
+
+
+Started GET "/posts" for ::1 at 2020-12-21 22:04:20 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.4ms | Allocations: 5658)
+
+
+Started DELETE "/posts/7" for ::1 at 2020-12-21 22:04:24 +0900
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WQzfM+CYCiQ4pYeqtAXPOTIYEkGmTM4+lgDVy/ogYc0XTTGKhJvqZ2VhszQPlCVHUS2LftUeZWCPEJpZTgiQGQ==", "id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:36:in `set_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+  [1m[36mPost Destroy (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms | Allocations: 3231)
+
+
+Started GET "/" for ::1 at 2020-12-21 22:04:24 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.4ms | Allocations: 5538)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-21 22:04:26 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.0ms | Allocations: 537)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 4941)
+
+
+Started POST "/posts" for ::1 at 2020-12-21 22:04:39 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"+ppnofdq1N6WAAudflwMVyq+VGZPntUFNxI5GMhNi7XXOqgCupUL4XFP2C41ASReHxXV49ny2s/GZX8QtfAF+A==", "post"=>{"title"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "content"=>""}, "commit"=>"投稿"}
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms | Allocations: 2253)
+
+
+
+ActiveRecord::RecordInvalid (バリデーションに失敗しました: タイトルは50文字以内で入力してください, 内容を入力してください):
+
+app/controllers/posts_controller.rb:16:in `create'
+Started GET "/posts" for ::1 at 2020-12-21 22:04:55 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 5589)
+
+
+Started GET "/users" for ::1 at 2020-12-21 22:14:04 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+>>>>>>> master
+
 actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -551,12 +619,8 @@ activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tag
 activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
 railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.2.3) lib/rack/method_override.rb:24:in `call'
@@ -574,79 +638,706 @@ puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.7) lib/puma/server.rb:472:in `process_client'
 puma (4.3.7) lib/puma/server.rb:328:in `block in run'
 puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-  
-ActionController::RoutingError (No route matches [GET] "/assets/@fortawesome/fontawesome-free/wenfonts/fa-regular-400.woff"):
-  
-actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.2.3) lib/rack/method_override.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
-webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
-puma (4.3.7) lib/puma/configuration.rb:228:in `call'
-puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
-puma (4.3.7) lib/puma/server.rb:472:in `process_client'
-puma (4.3.7) lib/puma/server.rb:328:in `block in run'
-puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-  
-ActionController::RoutingError (No route matches [GET] "/assets/@fortawesome/fontawesome-free/wenfonts/fa-regular-400.ttf"):
-  
-actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
-activesupport (6.0.3.4) lib/active_support/logger_silence.rb:36:in `silence'
-activesupport (6.0.3.4) lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
-sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.2.3) lib/rack/method_override.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
-webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
-puma (4.3.7) lib/puma/configuration.rb:228:in `call'
-puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
-puma (4.3.7) lib/puma/server.rb:472:in `process_client'
-puma (4.3.7) lib/puma/server.rb:328:in `block in run'
-puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+
+Started GET "/" for ::1 at 2020-12-21 22:14:08 +0900
+
+SyntaxError (/Users/masato/Desktop/rails/post_bootstrap_app/app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+      flash.now [:alert] = "更新に失敗しました"
+                         ^
+):
+
+app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+Started GET "/" for ::1 at 2020-12-21 22:15:27 +0900
+
+SyntaxError (/Users/masato/Desktop/rails/post_bootstrap_app/app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+      flash.now [:alert] = "更新に失敗しました"
+                         ^
+):
+
+app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+app/controllers/posts_controller.rb:32: syntax error, unexpected '=', expecting `end'
+Started GET "/" for ::1 at 2020-12-21 22:17:32 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 158)
+  Rendered layouts/_flash.html.erb (Duration: 1.0ms | Allocations: 153)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 3.6ms | Allocations: 12553)
+
+
+Started GET "/posts" for ::1 at 2020-12-21 22:17:46 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 5550)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-21 22:17:47 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 153.9ms | Allocations: 89009)
+  Rendered posts/new.html.erb within layouts/application (Duration: 155.9ms | Allocations: 89308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 169ms (Views: 166.4ms | ActiveRecord: 0.0ms | Allocations: 93825)
+
+
+Started POST "/posts" for ::1 at 2020-12-21 22:17:49 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"Az5tu6cAzPzV4UJ9GGGMBu5x6/CELnk7PLRkF6niBA8unqIY6v8TwzKukc5TPKQP29pqdRJCdvHNwyIf1F+KQg==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.5ms | Allocations: 555)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 6285)
+
+
+Started POST "/posts" for ::1 at 2020-12-21 22:17:51 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"AxPKW0w/w6h+mol4h5zuU2937YDyOhWVoRVPFuGSKyVNUiTiKDwj6yNeveY8DQQtDEJ0v4Fovsu4BQCEVbra8Q==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.9ms | Allocations: 546)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 6022)
+
+
+Started GET "/" for ::1 at 2020-12-22 20:18:55 +0900
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (15.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.3ms | Allocations: 4240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 163)
+  Rendered layouts/_flash.html.erb (Duration: 7.4ms | Allocations: 154)
+Completed 200 OK in 84ms (Views: 50.7ms | ActiveRecord: 23.8ms | Allocations: 13217)
+
+
+Started GET "/posts" for ::1 at 2020-12-22 20:18:57 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 5549)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:18:58 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 121.8ms | Allocations: 89113)
+  Rendered posts/new.html.erb within layouts/application (Duration: 123.3ms | Allocations: 89410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 133ms (Views: 132.3ms | ActiveRecord: 0.0ms | Allocations: 93930)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:19:00 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"EeBxRS1LkOvSynJbifcDnpN/UWmd0IvedaYHHxzA7IQ8QL7mYLRP1DWFoejCqiuXptTQ7Au8hBSE0UEXYX1iyQ==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 2540)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:19:00 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.0ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4942)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:19:02 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"gcQtOrLwMljUQOq8lmKE5MCWHSfsE53F4x/Z7L8pTbTPhcOD1vPSG4mE3iIt826ao6OEGJ9BNpv6D5Z+CwG8YA==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1938)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:19:02 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.5ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 4940)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:19:03 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"sS5msDhaDSbxOmxXOiRY9/VLduqSyLnWqYwkK0ByN4j/b4gJXFntZaz+WMmBtbKJln7v1eGaEoiwnGu59FrGXA==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 1921)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:19:03 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.1ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4956)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:19:04 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"IZXqwjM5tCb5t4sImvLokiBNFPVxWuoORcBajXJB+Fxv1AR7VzpUZaRzv5YhYwLsQ3iNygIIQVBc0BUfxmkJiA==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1933)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:19:04 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.0ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4946)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:19:05 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"2k4luyItg7FMasEdP2lZWppHrFvFwriJSXXgNO3I4TOUD8sCRi5j8hGu9YOE+LMk+XI1ZLaQE9dQZa+mWeAQ5w==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 1921)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:19:05 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 4933)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:19:06 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"+VxIgZ1TOhl4504Y9GluyLN8uDn7kXRETrWWH3KrLdO3HaY4+VDaWiUjeoZP+IS20EkhBojD3xpXpdmNxoPcBw==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1916)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:19:06 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 4949)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:20:16 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.1ms | Allocations: 597)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 659)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 2.1ms | Allocations: 8306)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:20:17 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"pLoQAMvLP3jcAMwcPKRKuFwwutc46wGHXN1ou6C3yt/q+/65r8jfO4HE+IKHNaDGPwUj6Eu5qtlFzScpFJ87Cw==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.4ms | Allocations: 555)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 6063)
+
+
+Started GET "/" for ::1 at 2020-12-22 20:28:17 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 4243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layouts/_flash.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 38ms (Views: 28.3ms | ActiveRecord: 3.8ms | Allocations: 13213)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:28:20 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 67.1ms | Allocations: 89113)
+  Rendered posts/new.html.erb within layouts/application (Duration: 68.6ms | Allocations: 89410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.0ms | Allocations: 93937)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:28:21 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"qiI2peBP0CHHZUf5FyyMNl6fKUQNtPfBwEeqqKtWZ2OHgvkGrbAPHiAqlEpccaQ/azSowZvY+AsxMOyg1uvpLg==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.0ms | Allocations: 555)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 6294)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:28:29 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"RzEVC7DQaVckMJCo/POGeOQoCMS4RhYyOp20JwaXVeIJcPuy1NOJFHn0pDZHYmwGhx2R+8sUvWwjjfu1sr+kNg==", "post"=>{"title"=>"a", "content"=>"aa"}, "commit"=>"投稿"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "a"], ["content", "aa"], ["created_at", "2020-12-22 11:28:29.652102"], ["updated_at", "2020-12-22 11:28:29.652102"]]
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms | Allocations: 3295)
+
+
+Started GET "/posts/8" for ::1 at 2020-12-22 20:28:29 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 5614)
+
+
+Started GET "/posts" for ::1 at 2020-12-22 20:28:33 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1273)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.3ms | Allocations: 5657)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:28:36 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.9ms | Allocations: 535)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 4960)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:28:38 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"mJ1Y1jcWSUJIgsA3Vcsw27JohHvjv25V2OFsKrkpx/e1PZd1eumWfa/NE4QelhjSh8MF/nXTYZ8plioixJRJug==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 546)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 11)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 6038)
+
+
+Started GET "/posts" for ::1 at 2020-12-22 20:29:08 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 5638)
+
+
+Started GET "/posts/8/edit" for ::1 at 2020-12-22 20:29:11 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.0ms | Allocations: 589)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 750)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 0.4ms | Allocations: 5801)
+
+
+Started PATCH "/posts/8" for ::1 at 2020-12-22 20:29:15 +0900
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"XvoutnyOxxqGlOuBcg54C/gMtHT4jcJ4sQ3Mc8t4OMLsvw53284iXbYVMUR8Gw7sCGk/NMl2VV31StVKIi6SQg==", "post"=>{"title"=>"a", "content"=>"a"}, "commit"=>"更新", "id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:29:in `update'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["content", "a"], ["updated_at", "2020-12-22 11:29:15.718174"], ["id", 8]]
+  ↳ app/controllers/posts_controller.rb:29:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:29:in `update'
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms | Allocations: 3816)
+
+
+Started GET "/posts/8" for ::1 at 2020-12-22 20:29:15 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 57)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 4950)
+
+
+Started GET "/posts" for ::1 at 2020-12-22 20:29:17 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1271)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.4ms | Allocations: 5647)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:29:34 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.2ms | Allocations: 599)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 2.5ms | Allocations: 8326)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:29:37 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"0AmeRmm79RrIUoZbhjDgNcjIaU/jWH7LMltXdIPoCTb9qVHlJEQqJS8dVejNbcg8/WPoynU0cQHDLBF8/lWHew==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.5ms | Allocations: 548)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 6091)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:29:44 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"c22vOZu+3udk67V8+kE6qKj8gvkinxo/rNanyYwXtB89LEGA/70+pDkvgeJB0NDWy8kbxlHNsWG1xuhbOD9Fyw==", "post"=>{"title"=>"test", "content"=>"a"}, "commit"=>"投稿"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test"], ["content", "a"], ["created_at", "2020-12-22 11:29:44.041270"], ["updated_at", "2020-12-22 11:29:44.041270"]]
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+Redirected to http://localhost:3000/posts/9
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms | Allocations: 3195)
+
+
+Started GET "/posts/9" for ::1 at 2020-12-22 20:29:44 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 5072)
+
+
+Started GET "/posts" for ::1 at 2020-12-22 20:29:46 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 5776)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:30:28 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.2ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 4943)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:30:30 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"VjG/2VlwygS544z7Fjx02IYT5g9Oltm3awASMOaT0Hh7kXB6FI8VO16sX0hdYVzRs7hnitj61n2ad1Q4my5eNQ==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.2ms | Allocations: 546)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6021)
+
+
+Started GET "/posts" for ::1 at 2020-12-22 20:30:31 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC[0m
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.5ms | Allocations: 5778)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:32:39 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.1ms | Allocations: 595)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 2.2ms | Allocations: 8257)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:32:45 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"Wd6VbtwnBIpVFhHQIeQE8XL7fRC8OrU3/waDfI71q5p0flrNkdjbtbJZwmNquSz4R1D8lSpWuv0OccV080gl1w==", "post"=>{"title"=>"test", "content"=>"伊勢"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test"], ["content", "伊勢"], ["created_at", "2020-12-22 11:32:45.303647"], ["updated_at", "2020-12-22 11:32:45.303647"]]
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 3280)
+
+
+Started GET "/posts/10" for ::1 at 2020-12-22 20:32:45 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 5065)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:32:47 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4941)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:32:48 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"kZ+l7I3wSfFa++4EQXKhMct3Oqeqdf+jh1Oo4HhP/9q8P2pPwA+Wzr20PbcKL4k4/ty7IjwZ8Gl2JO7oBfJxlw==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.2ms | Allocations: 548)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 6026)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:34:24 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.1ms | Allocations: 533)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 4948)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:36:23 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 531)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 4943)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:39:09 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"YSt/v/fxKXFmIoSvg9ncEQqF9zzBtq7T1hujwJ8KeTEvapEGk/LJMjvmsDE4SDZvabBuA7LkBY3PC+xSKyKI5Q==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 546)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.0ms | Allocations: 10666)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:42:15 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"KspVm3oj5fCR5kkp12Ine8SzcSf/qbcJneYEMlnXLV5ki7siHiAFs8wifbds880Fp4boGIz7HFeE9kug7f/cig==", "post"=>{"title"=>"test", "content"=>"test"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[36mPost Create (2.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test"], ["content", "test"], ["created_at", "2020-12-22 11:42:15.930146"], ["updated_at", "2020-12-22 11:42:15.930146"]]
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 21ms (ActiveRecord: 5.9ms | Allocations: 7137)
+
+
+Started GET "/posts/11" for ::1 at 2020-12-22 20:42:15 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 171)
+  Rendered layouts/_flash.html.erb (Duration: 0.9ms | Allocations: 155)
+Completed 200 OK in 41ms (Views: 32.5ms | ActiveRecord: 0.7ms | Allocations: 11847)
+
+
+Started GET "/posts/new" for ::1 at 2020-12-22 20:42:21 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 127.6ms | Allocations: 89112)
+  Rendered posts/new.html.erb within layouts/application (Duration: 129.5ms | Allocations: 89409)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 137ms (Views: 135.1ms | ActiveRecord: 0.0ms | Allocations: 93948)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:42:23 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"cDULCKE0Bcy5YjDRhPzgN5aTBgwQiv+riuhqwXR8ymFdlcSr7Mva814t42LPocg+oziHiYbm8GF7nyzJCcFELA==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.2ms | Allocations: 552)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 6176)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 20:42:25 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"9dsj4ERANNh9yVBDz6vMboq7eBn3uBbd3oK6VKAeGPe7ms1ZIEPUmyANZN10OiYQ6Y7hJoTqvYPHkvXGFDbpIw==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.1ms | Allocations: 546)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6011)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 21:07:09 +0900
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"q+wUvSv6V1kect9czyMCfMH+KC/ahBf3BEU8a/i6KuDlrfoET/m3GkO268J0sugCosuxEKnWvKkdVXP5TJLbNA==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_error_messages.html.erb (Duration: 1.1ms | Allocations: 388)
+  Rendered posts/_form.html.erb (Duration: 5.1ms | Allocations: 1781)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 161)
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 145)
+Completed 200 OK in 188ms (Views: 24.4ms | ActiveRecord: 2.9ms | Allocations: 103058)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 21:07:13 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"kh9g4z+9jffocqLeQg3AhI18JItNBcbLCpp06awHDQzcXo5aW75ttLW2lkD5nCr67km9tD5XbZUTijt7GC/82A==", "post"=>{"title"=>"", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_error_messages.html.erb (Duration: 2.2ms | Allocations: 373)
+  Rendered posts/_form.html.erb (Duration: 9.6ms | Allocations: 1435)
+  Rendered posts/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2035)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 152)
+  Rendered layouts/_flash.html.erb (Duration: 0.4ms | Allocations: 140)
+Completed 200 OK in 33ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 9329)
+
+
+Started POST "/posts" for ::1 at 2020-12-22 21:07:23 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"pnvndS8Ns+IZeJa+vg5UdiHS3IIWcGsSF21lAzaeJgboOgnMSw5ToUS8oiAFn74IQudFvWUiwEwOfSqRgrbX0g==", "post"=>{"title"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "content"=>""}, "commit"=>"投稿"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_error_messages.html.erb (Duration: 0.4ms | Allocations: 226)
+  Rendered posts/_form.html.erb (Duration: 2.6ms | Allocations: 840)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 11)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6395)
+
+
+>>>>>>> master
